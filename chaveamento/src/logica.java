@@ -17,17 +17,21 @@ public class Logica {
 
         String[][] jogosQuartas = new String[4][2];
 
+        System.out.println(Arrays.deepToString(montarJogos(jogosQuartas, todosOsTimes)));
+
+        scan.close();
+    }
+
+    public static String[][] montarJogos(String[][] jogos, String[] times) {
         int linhaMatriz = 0;
 
         for (int i = 0; i < 8; i += 2) {
-            jogosQuartas[linhaMatriz][0] = todosOsTimes[i];
-            jogosQuartas[linhaMatriz][1] = todosOsTimes[i + 1];
+            jogos[linhaMatriz][0] = times[i];
+            jogos[linhaMatriz][1] = times[i + 1];
 
             linhaMatriz++;
         }
 
-        System.out.println(Arrays.deepToString(jogosQuartas));
-
-        scan.close();
+        return jogos;
     }
 }
