@@ -36,7 +36,6 @@ public class InterfaceChaveamento extends JFrame {
 	private JTextField textField_11;
 	private JTextField textField_12;
 	private JTextField textField_13;
-	private Component horizontalStrut_8;
 	private JTextField textField_14;
 	private JTextField JtfPontoTime2;
 	private JTextField JtfPontoTime1;
@@ -52,6 +51,31 @@ public class InterfaceChaveamento extends JFrame {
 	private JTextField textField_26;
 	private JTextField textField_27;
 	private JTextField textField_28;
+	private Canvas canvasGrup3Chaveamento2;
+	private Canvas canvas_2;
+	private Canvas canvas_3;
+	private Canvas canvasGrup2Chaveamento2;
+	private Canvas canvasGrup2Chaveamento1;
+	private Canvas canvasGrup1Chaveamento2;
+	private Canvas canvasGrup1Chaveamento1;
+	private Canvas canvasGrup1Inter;
+	private Canvas canvasGrup2Inter;
+	private Canvas canvasGrup3Inter;
+	private Canvas canvas_11;
+	private Canvas canvas_12;
+	private Canvas canvas_14;
+	private Canvas canvas_15;
+	private Canvas canvas_13;
+	private Canvas canvas_16;
+	private Canvas canvas_17;
+	private Canvas canvasGrup3Chaveamento1Inter;
+	private Canvas canvasGrup3Chaveamento2Inter;
+	private Canvas canvas_20;
+	private Canvas canvas_21;
+	private Canvas canvasGrup1Chaveamento1Inter;
+	private Canvas canvasGrup1Chaveamento2Inter;
+	private Canvas canvasGrup2Chaveamento1Inter;
+	private Canvas canvasGrup2Chaveamento2Inter;
 
 	/**
 	 * Launch the application.
@@ -165,78 +189,6 @@ public class InterfaceChaveamento extends JFrame {
 		textField_7.setColumns(10);
 		contentPane.add(textField_7);
 		
-		Component horizontalStrut = Box.createHorizontalStrut(20);
-		horizontalStrut.setBounds(176, 77, 34, 20);
-		contentPane.add(horizontalStrut);
-		
-		Component horizontalStrut_1 = Box.createHorizontalStrut(20);
-		horizontalStrut_1.setBounds(176, 338, 34, 20);
-		contentPane.add(horizontalStrut_1);
-		
-		Component horizontalStrut_2 = Box.createHorizontalStrut(20);
-		horizontalStrut_2.setBounds(672, 338, 34, 20);
-		contentPane.add(horizontalStrut_2);
-		
-		Component horizontalStrut_3 = Box.createHorizontalStrut(20);
-		horizontalStrut_3.setBounds(672, 79, 34, 20);
-		contentPane.add(horizontalStrut_3);
-		
-		Component horizontalStrut_4 = Box.createHorizontalStrut(20);
-		horizontalStrut_4.setBounds(546, 209, 34, 20);
-		contentPane.add(horizontalStrut_4);
-		
-		Component horizontalStrut_5 = Box.createHorizontalStrut(20);
-		horizontalStrut_5.setBounds(303, 209, 34, 20);
-		contentPane.add(horizontalStrut_5);
-		
-		Component horizontalStrut_6 = Box.createHorizontalStrut(20);
-		horizontalStrut_6.setBounds(704, 54, 48, 45);
-		contentPane.add(horizontalStrut_6);
-		
-		Component horizontalStrut_7 = Box.createHorizontalStrut(20);
-		horizontalStrut_7.setBounds(704, 80, 48, 45);
-		contentPane.add(horizontalStrut_7);
-		
-		Component horizontalStrut_6_1 = Box.createHorizontalStrut(20);
-		horizontalStrut_6_1.setBounds(704, 313, 48, 45);
-		contentPane.add(horizontalStrut_6_1);
-		
-		Component horizontalStrut_6_2 = Box.createHorizontalStrut(20);
-		horizontalStrut_6_2.setBounds(704, 339, 48, 45);
-		contentPane.add(horizontalStrut_6_2);
-		
-		horizontalStrut_8 = Box.createHorizontalStrut(20);
-		horizontalStrut_8.setBounds(130, 53, 48, 45);
-		contentPane.add(horizontalStrut_8);
-		
-		Component horizontalStrut_6_3 = Box.createHorizontalStrut(20);
-		horizontalStrut_6_3.setBounds(130, 78, 48, 45);
-		contentPane.add(horizontalStrut_6_3);
-		
-		Component horizontalStrut_6_3_1 = Box.createHorizontalStrut(20);
-		horizontalStrut_6_3_1.setBounds(130, 313, 48, 45);
-		contentPane.add(horizontalStrut_6_3_1);
-		
-		Component horizontalStrut_6_3_2 = Box.createHorizontalStrut(20);
-		horizontalStrut_6_3_2.setBounds(130, 339, 48, 45);
-		contentPane.add(horizontalStrut_6_3_2);
-		
-		Component verticalStrut = Box.createVerticalStrut(20);
-		verticalStrut.setBounds(287, 87, 34, 133);
-		contentPane.add(verticalStrut);
-		
-		Component verticalStrut_1 = Box.createVerticalStrut(20);
-		verticalStrut_1.setBounds(561, 87, 34, 133);
-		contentPane.add(verticalStrut_1);
-		
-		Component verticalStrut_2 = Box.createVerticalStrut(20);
-		verticalStrut_2.setBounds(287, 218, 34, 133);
-		contentPane.add(verticalStrut_2);
-		
-		Component verticalStrut_3 = Box.createVerticalStrut(20);
-		verticalStrut_3.setBounds(561, 218, 34, 133);
-		contentPane.add(verticalStrut_3);
-		
 		textField_14 = new JTextField();
 		textField_14.setEditable(false);
 		textField_14.setFont(new Font("Tahoma", Font.PLAIN, 16));
@@ -292,11 +244,13 @@ public class InterfaceChaveamento extends JFrame {
 		contentPane.add(JtfPontoTime4);
 		
 		textField_19 = new JTextField();
+		textField_19.setEditable(false);
 		textField_19.setColumns(10);
 		textField_19.setBounds(212, 358, 34, 20);
 		contentPane.add(textField_19);
 		
 		textField_20 = new JTextField();
+		textField_20.setEditable(false);
 		textField_20.setColumns(10);
 		textField_20.setBounds(212, 59, 34, 20);
 		contentPane.add(textField_20);
@@ -322,24 +276,168 @@ public class InterfaceChaveamento extends JFrame {
 		contentPane.add(textField_24);
 		
 		textField_25 = new JTextField();
+		textField_25.setEditable(false);
 		textField_25.setColumns(10);
 		textField_25.setBounds(637, 59, 34, 20);
 		contentPane.add(textField_25);
 		
 		textField_26 = new JTextField();
+		textField_26.setEditable(false);
 		textField_26.setColumns(10);
 		textField_26.setBounds(637, 358, 34, 20);
 		contentPane.add(textField_26);
 		
 		textField_27 = new JTextField();
+		textField_27.setEditable(false);
 		textField_27.setColumns(10);
 		textField_27.setBounds(339, 189, 34, 20);
 		contentPane.add(textField_27);
 		
 		textField_28 = new JTextField();
+		textField_28.setEditable(false);
 		textField_28.setColumns(10);
 		textField_28.setBounds(510, 189, 34, 20);
 		contentPane.add(textField_28);
+		
+		Canvas canvasGrup3Chaveamento1 = new Canvas();
+		canvasGrup3Chaveamento1.setBackground(new Color(0, 0, 0));
+		canvasGrup3Chaveamento1.setBounds(699, 65, 57, 6);
+		contentPane.add(canvasGrup3Chaveamento1);
+		
+		
+		// GRUPO 1
+		
+		canvasGrup1Chaveamento2 = new Canvas();
+		canvasGrup1Chaveamento2.setBackground(Color.BLACK);
+		canvasGrup1Chaveamento2.setBounds(126, 107, 57, 6);
+		contentPane.add(canvasGrup1Chaveamento2);
+		
+		canvasGrup1Chaveamento1 = new Canvas();
+		canvasGrup1Chaveamento1.setBackground(Color.BLACK);
+		canvasGrup1Chaveamento1.setBounds(126, 65, 57, 6);
+		contentPane.add(canvasGrup1Chaveamento1);
+		
+		canvasGrup1Inter = new Canvas();
+		canvasGrup1Inter.setBackground(Color.BLACK);
+		canvasGrup1Inter.setBounds(179, 85, 34, 6);
+		contentPane.add(canvasGrup1Inter);
+		
+		canvasGrup1Chaveamento1Inter = new Canvas();
+		canvasGrup1Chaveamento1Inter.setBackground(Color.BLACK);
+		canvasGrup1Chaveamento1Inter.setBounds(179, 65, 6, 20);
+		contentPane.add(canvasGrup1Chaveamento1Inter);
+		
+		canvasGrup1Chaveamento2Inter = new Canvas();
+		canvasGrup1Chaveamento2Inter.setBackground(Color.BLACK);
+		canvasGrup1Chaveamento2Inter.setBounds(179, 90, 6, 23);
+		contentPane.add(canvasGrup1Chaveamento2Inter);
+		
+		
+		// GRUPO 2 
+		
+		canvasGrup2Chaveamento2 = new Canvas();
+		canvasGrup2Chaveamento2.setBackground(Color.BLACK);
+		canvasGrup2Chaveamento2.setBounds(126, 366, 57, 6);
+		contentPane.add(canvasGrup2Chaveamento2);
+		
+		canvasGrup2Chaveamento1 = new Canvas();
+		canvasGrup2Chaveamento1.setBackground(Color.BLACK);
+		canvasGrup2Chaveamento1.setBounds(126, 325, 57, 6);
+		contentPane.add(canvasGrup2Chaveamento1);
+		
+		canvasGrup2Inter = new Canvas();
+		canvasGrup2Inter.setBackground(Color.BLACK);
+		canvasGrup2Inter.setBounds(179, 345, 34, 6);
+		contentPane.add(canvasGrup2Inter);
+		
+		canvasGrup2Chaveamento1Inter = new Canvas();
+		canvasGrup2Chaveamento1Inter.setBackground(Color.BLACK);
+		canvasGrup2Chaveamento1Inter.setBounds(179, 325, 6, 20);
+		contentPane.add(canvasGrup2Chaveamento1Inter);
+		
+		canvasGrup2Chaveamento2Inter = new Canvas();
+		canvasGrup2Chaveamento2Inter.setBackground(Color.BLACK);
+		canvasGrup2Chaveamento2Inter.setBounds(179, 351, 6, 21);
+		contentPane.add(canvasGrup2Chaveamento2Inter);
+		
+		
+		// GRUPO 3
+		
+		canvasGrup3Chaveamento2 = new Canvas();
+		canvasGrup3Chaveamento2.setBackground(Color.BLACK);
+		canvasGrup3Chaveamento2.setBounds(699, 107, 57, 6);
+		contentPane.add(canvasGrup3Chaveamento2);
+		
+		canvas_2 = new Canvas();
+		canvas_2.setBackground(Color.BLACK);
+		canvas_2.setBounds(699, 326, 57, 6);
+		contentPane.add(canvas_2);
+		
+		canvas_3 = new Canvas();
+		canvas_3.setBackground(Color.BLACK);
+		canvas_3.setBounds(699, 366, 57, 6);
+		contentPane.add(canvas_3);
+		
+		
+		canvasGrup3Inter = new Canvas();
+		canvasGrup3Inter.setBackground(Color.BLACK);
+		canvasGrup3Inter.setBounds(671, 85, 34, 6);
+		contentPane.add(canvasGrup3Inter);
+		
+		canvas_11 = new Canvas();
+		canvas_11.setBackground(Color.BLACK);
+		canvas_11.setBounds(671, 345, 34, 6);
+		contentPane.add(canvas_11);
+		
+		canvas_12 = new Canvas();
+		canvas_12.setBackground(Color.BLACK);
+		canvas_12.setBounds(292, 216, 48, 6);
+		contentPane.add(canvas_12);
+		
+		canvas_14 = new Canvas();
+		canvas_14.setBackground(Color.BLACK);
+		canvas_14.setBounds(292, 98, 6, 121);
+		contentPane.add(canvas_14);
+		
+		canvas_15 = new Canvas();
+		canvas_15.setBackground(Color.BLACK);
+		canvas_15.setBounds(292, 217, 6, 121);
+		contentPane.add(canvas_15);
+		
+		canvas_13 = new Canvas();
+		canvas_13.setBackground(Color.BLACK);
+		canvas_13.setBounds(543, 216, 48, 6);
+		contentPane.add(canvas_13);
+		
+		canvas_16 = new Canvas();
+		canvas_16.setBackground(Color.BLACK);
+		canvas_16.setBounds(585, 98, 6, 121);
+		contentPane.add(canvas_16);
+		
+		canvas_17 = new Canvas();
+		canvas_17.setBackground(Color.BLACK);
+		canvas_17.setBounds(585, 217, 6, 121);
+		contentPane.add(canvas_17);
+		
+		canvasGrup3Chaveamento1Inter = new Canvas();
+		canvasGrup3Chaveamento1Inter.setBackground(Color.BLACK);
+		canvasGrup3Chaveamento1Inter.setBounds(699, 65, 6, 20);
+		contentPane.add(canvasGrup3Chaveamento1Inter);
+		
+		canvasGrup3Chaveamento2Inter = new Canvas();
+		canvasGrup3Chaveamento2Inter.setBackground(Color.BLACK);
+		canvasGrup3Chaveamento2Inter.setBounds(699, 90, 6, 20);
+		contentPane.add(canvasGrup3Chaveamento2Inter);
+		
+		canvas_20 = new Canvas();
+		canvas_20.setBackground(Color.BLACK);
+		canvas_20.setBounds(699, 326, 6, 20);
+		contentPane.add(canvas_20);
+		
+		canvas_21 = new Canvas();
+		canvas_21.setBackground(Color.BLACK);
+		canvas_21.setBounds(699, 350, 6, 20);
+		contentPane.add(canvas_21);
 
 	}
 }
