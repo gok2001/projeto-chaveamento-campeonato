@@ -18,24 +18,11 @@ public class Logica {
         String[][] jogosQuartas = new String[4][2];
         jogosQuartas = montarJogos(jogosQuartas, todosOsTimes);
 
-        System.out.println(Arrays.deepToString(jogosQuartas));
+        int[][] resultadoQuartas = new int[4][2];
 
-        int pontosTimeA, pontosTimeB;
+        resultadoQuartas = registrarPontuacao(jogosQuartas, resultadoQuartas);
 
-        for (int i = 0; i < 4; i++) {
-            System.out.println(jogosQuartas[i][0] + " x " + jogosQuartas[i][1]);
-            System.out.printf("Jogo %s \n", i + 1);
-
-            System.out.printf("Total de pontos do time %s: ", jogosQuartas[i][0]);
-            pontosTimeA = scan.nextInt();
-            scan.nextLine();
-
-            System.out.printf("Total de pontos do time %s: ", jogosQuartas[i][1]);
-            pontosTimeB = scan.nextInt();
-            scan.nextLine();
-
-            System.out.println(pontosTimeA + " x " + pontosTimeB);
-        }
+        System.out.println(Arrays.deepToString(resultadoQuartas));
 
         scan.close();
     }
@@ -51,5 +38,27 @@ public class Logica {
         }
 
         return jogos;
+    }
+
+    public static int[][] registrarPontuacao(String[][] jogos, int[][] resultado) {
+        Scanner scan = new Scanner(System.in);
+
+        for (int i = 0; i < 4; i++) {
+            System.out.printf("Jogo %s \n", i + 1);
+            System.out.println(jogos[i][0] + " x " + jogos[i][1]);
+            System.out.println();
+
+            System.out.printf("Total de pontos %s: ", jogos[i][0]);
+            resultado[i][0] = scan.nextInt();
+            scan.nextLine();
+
+            System.out.printf("Total de pontos %s: ", jogos[i][1]);
+            resultado[i][1] = scan.nextInt();
+            scan.nextLine();
+            System.out.println();
+        }
+
+        scan.close();
+        return resultado;
     }
 }
