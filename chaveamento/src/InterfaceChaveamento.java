@@ -28,32 +28,31 @@ public class InterfaceChaveamento extends JFrame {
 	private JTextField JtfTime4;
 	private JTextField JtfTime5;
 	private JTextField JtfTime6;
-	private JTextField textField_6;
-	private JTextField textField_7;
-	private JTextField textField_8;
-	private JTextField textField_9;
-	private JTextField textField_10;
-	private JTextField textField_11;
-	private JTextField textField_12;
-	private JTextField textField_13;
+	private JTextField JtfTime7;
+	private JTextField JtfTime8;
+	private JTextField JtfTime11;
+	private JTextField JtfTime12;
+	private JTextField JtfTime9;
+	private JTextField JtfTime10;
+	private JTextField JtfTime14;
+	private JTextField JtfTime13;
 	private JTextField textField_14;
 	private JTextField JtfPontoTime2;
 	private JTextField JtfPontoTime1;
 	private JTextField JtfPontoTime3;
 	private JTextField JtfPontoTime4;
-	private JTextField textField_19;
-	private JTextField textField_20;
+	private JTextField JtfPontoTime10;
+	private JTextField JtfPontoTime9;
 	private JTextField JtfPontoTime5;
 	private JTextField JtfPontoTime6;
-	private JTextField JtfTime7;
-	private JTextField textField_24;
-	private JTextField textField_25;
-	private JTextField textField_26;
-	private JTextField textField_27;
-	private JTextField textField_28;
+	private JTextField JtfPontoTime8;
+	private JTextField JtfPontoTime11;
+	private JTextField JtfPontoTime12;
+	private JTextField JtfPontoTime13;
+	private JTextField JtfPontoTime14;
 	private Canvas canvasGrup3Chaveamento2;
-	private Canvas canvas_2;
-	private Canvas canvas_3;
+	private Canvas canvasGrup4Chaveamento1;
+	private Canvas canvasGrup4Chaveamento2;
 	private Canvas canvasGrup2Chaveamento2;
 	private Canvas canvasGrup2Chaveamento1;
 	private Canvas canvasGrup1Chaveamento2;
@@ -61,21 +60,22 @@ public class InterfaceChaveamento extends JFrame {
 	private Canvas canvasGrup1Inter;
 	private Canvas canvasGrup2Inter;
 	private Canvas canvasGrup3Inter;
-	private Canvas canvas_11;
-	private Canvas canvas_12;
-	private Canvas canvas_14;
-	private Canvas canvas_15;
-	private Canvas canvas_13;
-	private Canvas canvas_16;
-	private Canvas canvas_17;
+	private Canvas canvasGrup4Inter;
+	private Canvas canvasSemiInter1;
+	private Canvas canvasSemi1;
+	private Canvas canvasSemi2;
+	private Canvas canvasSemiInter2;
+	private Canvas canvasSemi3;
+	private Canvas canvasSemi4;
 	private Canvas canvasGrup3Chaveamento1Inter;
 	private Canvas canvasGrup3Chaveamento2Inter;
-	private Canvas canvas_20;
-	private Canvas canvas_21;
+	private Canvas canvasGrup4Chaveamento1Inter;
+	private Canvas canvasGrup4Chaveamento2Inter;
 	private Canvas canvasGrup1Chaveamento1Inter;
 	private Canvas canvasGrup1Chaveamento2Inter;
 	private Canvas canvasGrup2Chaveamento1Inter;
 	private Canvas canvasGrup2Chaveamento2Inter;
+	private JTextField JtfPontosTime7;
 
 	/**
 	 * Launch the application.
@@ -117,17 +117,17 @@ public class InterfaceChaveamento extends JFrame {
 		JtfTime5.setColumns(10);
 		contentPane.add(JtfTime5);
 		
-		textField_10 = new JTextField();
-		textField_10.setEditable(false);
-		textField_10.setBounds(212, 79, 86, 20);
-		textField_10.setColumns(10);
-		contentPane.add(textField_10);
+		JtfTime9 = new JTextField();
+		JtfTime9.setEditable(false);
+		JtfTime9.setBounds(212, 79, 86, 20);
+		JtfTime9.setColumns(10);
+		contentPane.add(JtfTime9);
 		
-		textField_8 = new JTextField();
-		textField_8.setEditable(false);
-		textField_8.setBounds(585, 79, 86, 20);
-		textField_8.setColumns(10);
-		contentPane.add(textField_8);
+		JtfTime11 = new JTextField();
+		JtfTime11.setEditable(false);
+		JtfTime11.setBounds(585, 79, 86, 20);
+		JtfTime11.setColumns(10);
+		contentPane.add(JtfTime11);
 		
 		JtfTime2 = new JTextField();
 		JtfTime2.setEditable(false);
@@ -141,17 +141,17 @@ public class InterfaceChaveamento extends JFrame {
 		JtfTime6.setColumns(10);
 		contentPane.add(JtfTime6);
 		
-		textField_13 = new JTextField();
-		textField_13.setEditable(false);
-		textField_13.setBounds(339, 209, 86, 20);
-		textField_13.setColumns(10);
-		contentPane.add(textField_13);
+		JtfTime13 = new JTextField();
+		JtfTime13.setEditable(false);
+		JtfTime13.setBounds(339, 209, 86, 20);
+		JtfTime13.setColumns(10);
+		contentPane.add(JtfTime13);
 		
-		textField_12 = new JTextField();
-		textField_12.setEditable(false);
-		textField_12.setBounds(458, 209, 86, 20);
-		textField_12.setColumns(10);
-		contentPane.add(textField_12);
+		JtfTime14 = new JTextField();
+		JtfTime14.setEditable(false);
+		JtfTime14.setBounds(458, 209, 86, 20);
+		JtfTime14.setColumns(10);
+		contentPane.add(JtfTime14);
 		
 		JtfTime3 = new JTextField();
 		JtfTime3.setEditable(false);
@@ -159,23 +159,23 @@ public class InterfaceChaveamento extends JFrame {
 		JtfTime3.setColumns(10);
 		contentPane.add(JtfTime3);
 		
-		textField_6 = new JTextField();
-		textField_6.setEditable(false);
-		textField_6.setBounds(755, 325, 86, 20);
-		textField_6.setColumns(10);
-		contentPane.add(textField_6);
+		JtfTime7 = new JTextField();
+		JtfTime7.setEditable(false);
+		JtfTime7.setBounds(755, 325, 86, 20);
+		JtfTime7.setColumns(10);
+		contentPane.add(JtfTime7);
 		
-		textField_11 = new JTextField();
-		textField_11.setEditable(false);
-		textField_11.setBounds(212, 338, 86, 20);
-		textField_11.setColumns(10);
-		contentPane.add(textField_11);
+		JtfTime10 = new JTextField();
+		JtfTime10.setEditable(false);
+		JtfTime10.setBounds(212, 338, 86, 20);
+		JtfTime10.setColumns(10);
+		contentPane.add(JtfTime10);
 		
-		textField_9 = new JTextField();
-		textField_9.setEditable(false);
-		textField_9.setBounds(585, 338, 86, 20);
-		textField_9.setColumns(10);
-		contentPane.add(textField_9);
+		JtfTime12 = new JTextField();
+		JtfTime12.setEditable(false);
+		JtfTime12.setBounds(585, 338, 86, 20);
+		JtfTime12.setColumns(10);
+		contentPane.add(JtfTime12);
 		
 		JtfTime4 = new JTextField();
 		JtfTime4.setEditable(false);
@@ -183,11 +183,11 @@ public class InterfaceChaveamento extends JFrame {
 		JtfTime4.setColumns(10);
 		contentPane.add(JtfTime4);
 		
-		textField_7 = new JTextField();
-		textField_7.setEditable(false);
-		textField_7.setBounds(755, 352, 86, 20);
-		textField_7.setColumns(10);
-		contentPane.add(textField_7);
+		JtfTime8 = new JTextField();
+		JtfTime8.setEditable(false);
+		JtfTime8.setBounds(755, 352, 86, 20);
+		JtfTime8.setColumns(10);
+		contentPane.add(JtfTime8);
 		
 		textField_14 = new JTextField();
 		textField_14.setEditable(false);
@@ -243,17 +243,17 @@ public class InterfaceChaveamento extends JFrame {
 		JtfPontoTime4.setBounds(41, 372, 34, 20);
 		contentPane.add(JtfPontoTime4);
 		
-		textField_19 = new JTextField();
-		textField_19.setEditable(false);
-		textField_19.setColumns(10);
-		textField_19.setBounds(212, 358, 34, 20);
-		contentPane.add(textField_19);
+		JtfPontoTime10 = new JTextField();
+		JtfPontoTime10.setEditable(false);
+		JtfPontoTime10.setColumns(10);
+		JtfPontoTime10.setBounds(212, 358, 34, 20);
+		contentPane.add(JtfPontoTime10);
 		
-		textField_20 = new JTextField();
-		textField_20.setEditable(false);
-		textField_20.setColumns(10);
-		textField_20.setBounds(212, 59, 34, 20);
-		contentPane.add(textField_20);
+		JtfPontoTime9 = new JTextField();
+		JtfPontoTime9.setEditable(false);
+		JtfPontoTime9.setColumns(10);
+		JtfPontoTime9.setBounds(212, 59, 34, 20);
+		contentPane.add(JtfPontoTime9);
 		
 		JtfPontoTime5 = new JTextField();
 		JtfPontoTime5.setColumns(10);
@@ -265,44 +265,39 @@ public class InterfaceChaveamento extends JFrame {
 		JtfPontoTime6.setBounds(807, 113, 34, 20);
 		contentPane.add(JtfPontoTime6);
 		
-		JtfTime7 = new JTextField();
-		JtfTime7.setColumns(10);
-		JtfTime7.setBounds(807, 305, 34, 20);
-		contentPane.add(JtfTime7);
+		JtfPontosTime7 = new JTextField();
+		JtfPontosTime7.setColumns(10);
+		JtfPontosTime7.setBounds(807, 305, 34, 20);
+		contentPane.add(JtfPontosTime7);
 		
-		textField_24 = new JTextField();
-		textField_24.setColumns(10);
-		textField_24.setBounds(807, 372, 34, 20);
-		contentPane.add(textField_24);
+		JtfPontoTime8 = new JTextField();
+		JtfPontoTime8.setColumns(10);
+		JtfPontoTime8.setBounds(807, 372, 34, 20);
+		contentPane.add(JtfPontoTime8);
 		
-		textField_25 = new JTextField();
-		textField_25.setEditable(false);
-		textField_25.setColumns(10);
-		textField_25.setBounds(637, 59, 34, 20);
-		contentPane.add(textField_25);
+		JtfPontoTime11 = new JTextField();
+		JtfPontoTime11.setEditable(false);
+		JtfPontoTime11.setColumns(10);
+		JtfPontoTime11.setBounds(637, 59, 34, 20);
+		contentPane.add(JtfPontoTime11);
 		
-		textField_26 = new JTextField();
-		textField_26.setEditable(false);
-		textField_26.setColumns(10);
-		textField_26.setBounds(637, 358, 34, 20);
-		contentPane.add(textField_26);
+		JtfPontoTime12 = new JTextField();
+		JtfPontoTime12.setEditable(false);
+		JtfPontoTime12.setColumns(10);
+		JtfPontoTime12.setBounds(637, 358, 34, 20);
+		contentPane.add(JtfPontoTime12);
 		
-		textField_27 = new JTextField();
-		textField_27.setEditable(false);
-		textField_27.setColumns(10);
-		textField_27.setBounds(339, 189, 34, 20);
-		contentPane.add(textField_27);
+		JtfPontoTime13 = new JTextField();
+		JtfPontoTime13.setEditable(false);
+		JtfPontoTime13.setColumns(10);
+		JtfPontoTime13.setBounds(339, 189, 34, 20);
+		contentPane.add(JtfPontoTime13);
 		
-		textField_28 = new JTextField();
-		textField_28.setEditable(false);
-		textField_28.setColumns(10);
-		textField_28.setBounds(510, 189, 34, 20);
-		contentPane.add(textField_28);
-		
-		Canvas canvasGrup3Chaveamento1 = new Canvas();
-		canvasGrup3Chaveamento1.setBackground(new Color(0, 0, 0));
-		canvasGrup3Chaveamento1.setBounds(699, 65, 57, 6);
-		contentPane.add(canvasGrup3Chaveamento1);
+		JtfPontoTime14 = new JTextField();
+		JtfPontoTime14.setEditable(false);
+		JtfPontoTime14.setColumns(10);
+		JtfPontoTime14.setBounds(510, 189, 34, 20);
+		contentPane.add(JtfPontoTime14);
 		
 		
 		// GRUPO 1
@@ -363,61 +358,20 @@ public class InterfaceChaveamento extends JFrame {
 		
 		// GRUPO 3
 		
-		canvasGrup3Chaveamento2 = new Canvas();
-		canvasGrup3Chaveamento2.setBackground(Color.BLACK);
-		canvasGrup3Chaveamento2.setBounds(699, 107, 57, 6);
-		contentPane.add(canvasGrup3Chaveamento2);
-		
-		canvas_2 = new Canvas();
-		canvas_2.setBackground(Color.BLACK);
-		canvas_2.setBounds(699, 326, 57, 6);
-		contentPane.add(canvas_2);
-		
-		canvas_3 = new Canvas();
-		canvas_3.setBackground(Color.BLACK);
-		canvas_3.setBounds(699, 366, 57, 6);
-		contentPane.add(canvas_3);
-		
+		Canvas canvasGrup3Chaveamento1 = new Canvas();
+		canvasGrup3Chaveamento1.setBackground(new Color(0, 0, 0));
+		canvasGrup3Chaveamento1.setBounds(699, 65, 57, 6);
+		contentPane.add(canvasGrup3Chaveamento1);
 		
 		canvasGrup3Inter = new Canvas();
 		canvasGrup3Inter.setBackground(Color.BLACK);
 		canvasGrup3Inter.setBounds(671, 85, 34, 6);
 		contentPane.add(canvasGrup3Inter);
 		
-		canvas_11 = new Canvas();
-		canvas_11.setBackground(Color.BLACK);
-		canvas_11.setBounds(671, 345, 34, 6);
-		contentPane.add(canvas_11);
-		
-		canvas_12 = new Canvas();
-		canvas_12.setBackground(Color.BLACK);
-		canvas_12.setBounds(292, 216, 48, 6);
-		contentPane.add(canvas_12);
-		
-		canvas_14 = new Canvas();
-		canvas_14.setBackground(Color.BLACK);
-		canvas_14.setBounds(292, 98, 6, 121);
-		contentPane.add(canvas_14);
-		
-		canvas_15 = new Canvas();
-		canvas_15.setBackground(Color.BLACK);
-		canvas_15.setBounds(292, 217, 6, 121);
-		contentPane.add(canvas_15);
-		
-		canvas_13 = new Canvas();
-		canvas_13.setBackground(Color.BLACK);
-		canvas_13.setBounds(543, 216, 48, 6);
-		contentPane.add(canvas_13);
-		
-		canvas_16 = new Canvas();
-		canvas_16.setBackground(Color.BLACK);
-		canvas_16.setBounds(585, 98, 6, 121);
-		contentPane.add(canvas_16);
-		
-		canvas_17 = new Canvas();
-		canvas_17.setBackground(Color.BLACK);
-		canvas_17.setBounds(585, 217, 6, 121);
-		contentPane.add(canvas_17);
+		canvasGrup3Chaveamento2 = new Canvas();
+		canvasGrup3Chaveamento2.setBackground(Color.BLACK);
+		canvasGrup3Chaveamento2.setBounds(699, 107, 57, 6);
+		contentPane.add(canvasGrup3Chaveamento2);
 		
 		canvasGrup3Chaveamento1Inter = new Canvas();
 		canvasGrup3Chaveamento1Inter.setBackground(Color.BLACK);
@@ -429,15 +383,67 @@ public class InterfaceChaveamento extends JFrame {
 		canvasGrup3Chaveamento2Inter.setBounds(699, 90, 6, 20);
 		contentPane.add(canvasGrup3Chaveamento2Inter);
 		
-		canvas_20 = new Canvas();
-		canvas_20.setBackground(Color.BLACK);
-		canvas_20.setBounds(699, 326, 6, 20);
-		contentPane.add(canvas_20);
 		
-		canvas_21 = new Canvas();
-		canvas_21.setBackground(Color.BLACK);
-		canvas_21.setBounds(699, 350, 6, 20);
-		contentPane.add(canvas_21);
+		// GRUPO 4
+		
+		canvasGrup4Inter = new Canvas();
+		canvasGrup4Inter.setBackground(Color.BLACK);
+		canvasGrup4Inter.setBounds(671, 345, 34, 6);
+		contentPane.add(canvasGrup4Inter);
+		
+		canvasGrup4Chaveamento1 = new Canvas();
+		canvasGrup4Chaveamento1.setBackground(Color.BLACK);
+		canvasGrup4Chaveamento1.setBounds(699, 326, 57, 6);
+		contentPane.add(canvasGrup4Chaveamento1);
+		
+		canvasGrup4Chaveamento2 = new Canvas();
+		canvasGrup4Chaveamento2.setBackground(Color.BLACK);
+		canvasGrup4Chaveamento2.setBounds(699, 366, 57, 6);
+		contentPane.add(canvasGrup4Chaveamento2);
+		
+		canvasGrup4Chaveamento1Inter = new Canvas();
+		canvasGrup4Chaveamento1Inter.setBackground(Color.BLACK);
+		canvasGrup4Chaveamento1Inter.setBounds(699, 326, 6, 20);
+		contentPane.add(canvasGrup4Chaveamento1Inter);
+		
+		canvasGrup4Chaveamento2Inter = new Canvas();
+		canvasGrup4Chaveamento2Inter.setBackground(Color.BLACK);
+		canvasGrup4Chaveamento2Inter.setBounds(699, 350, 6, 20);
+		contentPane.add(canvasGrup4Chaveamento2Inter);
+		
+		
+		
+		
+		
+		canvasSemiInter1 = new Canvas();
+		canvasSemiInter1.setBackground(Color.BLACK);
+		canvasSemiInter1.setBounds(292, 216, 48, 6);
+		contentPane.add(canvasSemiInter1);
+		
+		canvasSemi1 = new Canvas();
+		canvasSemi1.setBackground(Color.BLACK);
+		canvasSemi1.setBounds(292, 98, 6, 121);
+		contentPane.add(canvasSemi1);
+		
+		canvasSemi2 = new Canvas();
+		canvasSemi2.setBackground(Color.BLACK);
+		canvasSemi2.setBounds(292, 217, 6, 121);
+		contentPane.add(canvasSemi2);
+		
+		canvasSemiInter2 = new Canvas();
+		canvasSemiInter2.setBackground(Color.BLACK);
+		canvasSemiInter2.setBounds(543, 216, 48, 6);
+		contentPane.add(canvasSemiInter2);
+		
+		canvasSemi3 = new Canvas();
+		canvasSemi3.setBackground(Color.BLACK);
+		canvasSemi3.setBounds(585, 98, 6, 121);
+		contentPane.add(canvasSemi3);
+		
+		canvasSemi4 = new Canvas();
+		canvasSemi4.setBackground(Color.BLACK);
+		canvasSemi4.setBounds(585, 217, 6, 121);
+		contentPane.add(canvasSemi4);
 
 	}
 }
