@@ -50,7 +50,21 @@ public class Logica {
             }
         }
 
-        System.out.println(Arrays.toString(vencedoresSemi));
+        String[][] jogoFinal = new String[1][2];
+        jogoFinal = montarJogos(jogoFinal, vencedoresSemi);
+
+        int[][] resultadoFinal = new int[1][2];
+        resultadoFinal = registrarPontuacao(jogoFinal, resultadoFinal);
+
+        String vencedor;
+
+        if (resultadoFinal[0][0] > resultadoFinal[0][1]) {
+            vencedor = jogoFinal[0][0];
+        } else {
+            vencedor = jogoFinal[0][1];
+        }
+
+        System.out.println(vencedor);
 
         scan.close();
     }
