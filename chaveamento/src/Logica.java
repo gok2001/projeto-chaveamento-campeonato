@@ -2,8 +2,9 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Logica {
+    public static Scanner scan = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
 
         System.out.print("Digite o nome do campeonato: ");
         String nomeCampeonato = scan.nextLine();
@@ -14,6 +15,8 @@ public class Logica {
             System.out.print("Digite o nome de um time: ");
             todosOsTimes[i] = scan.nextLine();
         }
+
+        System.out.println();
 
         String[][] jogosQuartas = new String[4][2];
         jogosQuartas = montarJogos(jogosQuartas, todosOsTimes);
@@ -31,7 +34,23 @@ public class Logica {
             }
         }
 
-        System.out.println(Arrays.toString(vencedoresQuartas));
+        String[][] jogosSemi = new String[2][2];
+        jogosSemi = montarJogos(jogosSemi, vencedoresQuartas);
+
+        int[][] resultadoSemi = new int[2][2];
+        resultadoSemi = registrarPontuacao(jogosSemi, resultadoSemi);
+
+        String[] vencedoresSemi = new String[2];
+
+        for (int i = 0; i < resultadoSemi.length; i++) {
+            if (resultadoSemi[i][0] > resultadoSemi[i][1]) {
+                vencedoresSemi[i] = jogosSemi[i][0];
+            } else {
+                vencedoresSemi[i] = jogosSemi[i][1];
+            }
+        }
+
+        System.out.println(Arrays.toString(vencedoresSemi));
 
         scan.close();
     }
@@ -50,8 +69,6 @@ public class Logica {
     }
 
     public static int[][] registrarPontuacao(String[][] jogos, int[][] resultado) {
-        Scanner scan = new Scanner(System.in);
-
         for (int i = 0; i < jogos.length; i++) {
             System.out.printf("Jogo %s \n", i + 1);
             System.out.println(jogos[i][0] + " x " + jogos[i][1]);
@@ -67,7 +84,6 @@ public class Logica {
             System.out.println();
         }
 
-        scan.close();
         return resultado;
     }
 }
