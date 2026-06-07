@@ -1,3 +1,4 @@
+package chaveamentoDev;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
@@ -13,6 +14,8 @@ import com.jgoodies.forms.layout.RowSpec;
 import com.jgoodies.forms.layout.FormSpecs;
 import java.awt.Canvas;
 import java.awt.Component;
+import java.awt.Dialog.ModalityType;
+
 import javax.swing.Box;
 import javax.swing.JLabel;
 import java.awt.Color;
@@ -36,7 +39,7 @@ public class InterfaceChaveamento extends JFrame {
 	private JTextField JtfTime10;
 	private JTextField JtfTime14;
 	private JTextField JtfTime13;
-	private JTextField textField_14;
+	private JTextField JtfTimeVencedor;
 	private JTextField JtfPontoTime2;
 	private JTextField JtfPontoTime1;
 	private JTextField JtfPontoTime3;
@@ -189,12 +192,12 @@ public class InterfaceChaveamento extends JFrame {
 		JtfTime8.setColumns(10);
 		contentPane.add(JtfTime8);
 		
-		textField_14 = new JTextField();
-		textField_14.setEditable(false);
-		textField_14.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		textField_14.setBounds(391, 271, 102, 30);
-		contentPane.add(textField_14);
-		textField_14.setColumns(10);
+		JtfTimeVencedor = new JTextField();
+		JtfTimeVencedor.setEditable(false);
+		JtfTimeVencedor.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		JtfTimeVencedor.setBounds(391, 271, 102, 30);
+		contentPane.add(JtfTimeVencedor);
+		JtfTimeVencedor.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("WIN!");
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 20));
@@ -202,10 +205,10 @@ public class InterfaceChaveamento extends JFrame {
 		lblNewLabel.setBounds(420, 311, 48, 14);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Nome Campeonato");
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNewLabel_1.setBounds(377, 26, 153, 14);
-		contentPane.add(lblNewLabel_1);
+		JLabel lblNomeCampeonato = new JLabel("Nome Campeonato");
+		lblNomeCampeonato.setFont(new Font("Tahoma", Font.PLAIN, 16));
+		lblNomeCampeonato.setBounds(377, 26, 153, 14);
+		contentPane.add(lblNomeCampeonato);
 		
 		JLabel lblNewLabel_2 = new JLabel("Grupo 1");
 		lblNewLabel_2.setBounds(81, 40, 46, 14);
@@ -425,6 +428,8 @@ public class InterfaceChaveamento extends JFrame {
 		canvasSemi1.setBounds(292, 98, 6, 121);
 		contentPane.add(canvasSemi1);
 		
+		
+		
 		canvasSemi2 = new Canvas();
 		canvasSemi2.setBackground(Color.BLACK);
 		canvasSemi2.setBounds(292, 217, 6, 121);
@@ -434,6 +439,8 @@ public class InterfaceChaveamento extends JFrame {
 		canvasSemiInter2.setBackground(Color.BLACK);
 		canvasSemiInter2.setBounds(543, 216, 48, 6);
 		contentPane.add(canvasSemiInter2);
+		
+		
 		
 		canvasSemi3 = new Canvas();
 		canvasSemi3.setBackground(Color.BLACK);
@@ -445,5 +452,10 @@ public class InterfaceChaveamento extends JFrame {
 		canvasSemi4.setBounds(585, 217, 6, 121);
 		contentPane.add(canvasSemi4);
 
+	}
+
+	public void setModalityType(ModalityType applicationModal) {
+		// TODO Auto-generated method stub
+		
 	}
 }

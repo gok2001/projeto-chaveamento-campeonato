@@ -1,15 +1,19 @@
+package chaveamentoDev;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Logica {
     public static Scanner scan = new Scanner(System.in);
+    
+    public static String[] todosOsTimes = new String[8];
+    
+    public static String nomeCampeonato;
 
     public static void main(String[] args) {
 
         System.out.print("Digite o nome do campeonato: ");
         String nomeCampeonato = scan.nextLine();
-
-        String[] todosOsTimes = new String[8];
 
         for (int i = 0; i < 8; i++) {
             System.out.print("Digite o nome de um time: ");
@@ -99,5 +103,18 @@ public class Logica {
         }
 
         return resultado;
+    }
+    
+    public static void registrarTime(String nome, int i) {
+    	todosOsTimes[i] = nome;
+    }
+    
+    public static String exibirTimes(){
+    	String res = Arrays.toString(todosOsTimes);
+    	return res;
+    }
+    
+    public static void registrarNomeCamp(String nome) {
+    	nomeCampeonato = nome;
     }
 }

@@ -1,3 +1,5 @@
+package chaveamentoDev;
+import java.awt.Dialog.ModalityType;
 import java.awt.EventQueue;
 import java.awt.Font;
 
@@ -41,6 +43,7 @@ public class telaCadastro extends JFrame {
     }
 
     public telaCadastro() {
+    	Logica logica = new Logica();
     	
         setTitle("Cadastro de Times");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -132,10 +135,18 @@ public class telaCadastro extends JFrame {
         textField_7.setBounds(340, 329, 86, 20);
         contentPane.add(textField_7);
 
+        JLabel lblTeste = new JLabel("New label");
+        lblTeste.setFont(new Font("Tahoma", Font.PLAIN, 7));
+        lblTeste.setVerticalAlignment(SwingConstants.TOP);
+        lblTeste.setBounds(10, 368, 450, 25);
+        contentPane.add(lblTeste);
+        
         JButton btnCadastrar = new JButton("Cadastrar");
         btnCadastrar.addActionListener(new ActionListener() {
         	public void actionPerformed(ActionEvent e) {
         		validarECadastrar();
+        		
+        		lblTeste.setText(logica.exibirTimes());
         	}
         	
 			private void validarECadastrar() {
@@ -146,6 +157,9 @@ public class telaCadastro extends JFrame {
 		            textField.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField.getText(), 0);
+				}
 				
 				if (textField_1.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -153,6 +167,9 @@ public class telaCadastro extends JFrame {
 		            textField_1.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField_1.getText(), 1);
+				}
 				
 				if (textField_2.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -160,6 +177,9 @@ public class telaCadastro extends JFrame {
 		            textField_2.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField_2.getText(), 2);
+				}
 				
 				if (textField_3.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -167,6 +187,9 @@ public class telaCadastro extends JFrame {
 		            textField_3.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField_3.getText(), 3);
+				}
 				
 				if (textField_4.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -174,6 +197,9 @@ public class telaCadastro extends JFrame {
 		            textField_4.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField_4.getText(), 4);
+				}
 				
 				if (textField_5.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -181,6 +207,9 @@ public class telaCadastro extends JFrame {
 		            textField_5.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField_5.getText(), 5);
+				}
 				
 				if (textField_6.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -188,6 +217,9 @@ public class telaCadastro extends JFrame {
 		            textField_6.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField_6.getText(), 6);
+				}
 				
 				if (textField_7.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -195,6 +227,9 @@ public class telaCadastro extends JFrame {
 		            textField_7.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarTime(textField_7.getText(), 7);
+				}
 				
 				if (textCampeonato.getText().trim().isEmpty()) {
 		            JOptionPane.showMessageDialog(null,
@@ -202,8 +237,16 @@ public class telaCadastro extends JFrame {
 		            textCampeonato.requestFocus();
 		            return;
 		        }
+				else {
+					logica.registrarNomeCamp(textCampeonato.getText());
+				}
 				
 		        JOptionPane.showMessageDialog(null, "Pronto para começar a Pelada!");
+		        
+		        InterfaceChaveamento interChaveamento = new InterfaceChaveamento();
+        		interChaveamento.setModalityType(ModalityType.APPLICATION_MODAL);
+        		interChaveamento.setVisible(true);
+		        
 		    }
 		});
         btnCadastrar.setBounds(337, 411, 100, 39);
@@ -220,10 +263,11 @@ public class telaCadastro extends JFrame {
 
         try {
             lblImagem.setIcon(
-                new ImageIcon(telaCadastro.class.getResource("/imagens/aq (1).png"))
+                new ImageIcon(telaCadastro.class.getResource("aq (1).png"))
             );
         } catch (Exception e) {
             System.out.println("Imagem não encontrada.");
+            e.printStackTrace();
         }
 
         lblImagem.setBounds(147, 91, 170, 258);
