@@ -77,8 +77,9 @@ public class Logica {
                 scan.nextLine();
 
                 if (resultado[i][0] == resultado[i][1]) {
-                    System.out.println("Empates não são permitidos.");
-                    System.out.println("Digite o resultado novamente.");
+                    System.out.println("Empates não são permitidos!");
+                } else if (resultado[i][0] < 0 || resultado[i][1] < 0) {
+                    System.out.println("Não é possível resultado negativo!");
                 } else {
                     placarValido = true;
                 }
