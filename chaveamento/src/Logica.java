@@ -25,14 +25,7 @@ public class Logica {
         resultadoQuartas = registrarPontuacao(jogosQuartas, resultadoQuartas);
 
         String[] vencedoresQuartas = new String[4];
-
-        for (int i = 0; i < resultadoQuartas.length; i++) {
-            if (resultadoQuartas[i][0] > resultadoQuartas[i][1]) {
-                vencedoresQuartas[i] = jogosQuartas[i][0];
-            } else {
-                vencedoresQuartas[i] = jogosQuartas[i][1];
-            }
-        }
+        vencedoresQuartas = obterVencedores(jogosQuartas, resultadoQuartas);
 
         String[][] jogosSemi = new String[2][2];
         jogosSemi = montarJogos(jogosSemi, vencedoresQuartas);
@@ -41,14 +34,7 @@ public class Logica {
         resultadoSemi = registrarPontuacao(jogosSemi, resultadoSemi);
 
         String[] vencedoresSemi = new String[2];
-
-        for (int i = 0; i < resultadoSemi.length; i++) {
-            if (resultadoSemi[i][0] > resultadoSemi[i][1]) {
-                vencedoresSemi[i] = jogosSemi[i][0];
-            } else {
-                vencedoresSemi[i] = jogosSemi[i][1];
-            }
-        }
+        vencedoresSemi = obterVencedores(jogosSemi, resultadoSemi);
 
         String[][] jogoFinal = new String[1][2];
         jogoFinal = montarJogos(jogoFinal, vencedoresSemi);
@@ -56,15 +42,10 @@ public class Logica {
         int[][] resultadoFinal = new int[1][2];
         resultadoFinal = registrarPontuacao(jogoFinal, resultadoFinal);
 
-        String vencedor;
+        String[] vencedor = new String[1];
+        vencedor = obterVencedores(jogoFinal, resultadoFinal);
 
-        if (resultadoFinal[0][0] > resultadoFinal[0][1]) {
-            vencedor = jogoFinal[0][0];
-        } else {
-            vencedor = jogoFinal[0][1];
-        }
-
-        System.out.println(vencedor);
+        System.out.println(Arrays.toString(vencedor));
 
         scan.close();
     }
@@ -99,5 +80,19 @@ public class Logica {
         }
 
         return resultado;
+    }
+
+    public static String[] obterVencedores(String[][] jogos, int[][] resultado) {
+        String[] vencedores = new String[jogos.length];
+
+        for (int i = 0; i < resultado.length; i++) {
+            if (resultado[i][0] > resultado[i][1]) {
+                vencedores[i] = jogos[i][0];
+            } else {
+                vencedores[i] = jogos[i][1];
+            }
+        }
+
+        return vencedores;
     }
 }
