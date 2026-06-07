@@ -62,16 +62,27 @@ public class Logica {
 
     public static int[][] registrarPontuacao(String[][] jogos, int[][] resultado) {
         for (int i = 0; i < jogos.length; i++) {
-            System.out.printf("Jogo %s \n", i + 1);
-            System.out.println(jogos[i][0] + " x " + jogos[i][1]);
+            boolean placarValido = false;
 
-            System.out.printf("Total de pontos %s: ", jogos[i][0]);
-            resultado[i][0] = scan.nextInt();
-            scan.nextLine();
+            while (!placarValido) {
+                System.out.printf("Jogo %s \n", i + 1);
+                System.out.println(jogos[i][0] + " x " + jogos[i][1]);
 
-            System.out.printf("Total de pontos %s: ", jogos[i][1]);
-            resultado[i][1] = scan.nextInt();
-            scan.nextLine();
+                System.out.printf("Total de pontos %s: ", jogos[i][0]);
+                resultado[i][0] = scan.nextInt();
+                scan.nextLine();
+
+                System.out.printf("Total de pontos %s: ", jogos[i][1]);
+                resultado[i][1] = scan.nextInt();
+                scan.nextLine();
+
+                if (resultado[i][0] == resultado[i][1]) {
+                    System.out.println("Empates não são permitidos.");
+                    System.out.println("Digite o resultado novamente.");
+                } else {
+                    placarValido = true;
+                }
+            }
 
             System.out.println();
         }
