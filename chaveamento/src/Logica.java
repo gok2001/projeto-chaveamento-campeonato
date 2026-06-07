@@ -24,8 +24,7 @@ public class Logica {
         int[][] resultadoQuartas = new int[4][2];
         resultadoQuartas = registrarPontuacao(jogosQuartas, resultadoQuartas);
 
-        String[] vencedoresQuartas = new String[4];
-        vencedoresQuartas = obterVencedores(jogosQuartas, resultadoQuartas);
+        String[] vencedoresQuartas = obterVencedores(jogosQuartas, resultadoQuartas);
 
         String[][] jogosSemi = new String[2][2];
         jogosSemi = montarJogos(jogosSemi, vencedoresQuartas);
@@ -33,8 +32,7 @@ public class Logica {
         int[][] resultadoSemi = new int[2][2];
         resultadoSemi = registrarPontuacao(jogosSemi, resultadoSemi);
 
-        String[] vencedoresSemi = new String[2];
-        vencedoresSemi = obterVencedores(jogosSemi, resultadoSemi);
+        String[] vencedoresSemi = obterVencedores(jogosSemi, resultadoSemi);
 
         String[][] jogoFinal = new String[1][2];
         jogoFinal = montarJogos(jogoFinal, vencedoresSemi);
@@ -42,8 +40,7 @@ public class Logica {
         int[][] resultadoFinal = new int[1][2];
         resultadoFinal = registrarPontuacao(jogoFinal, resultadoFinal);
 
-        String[] vencedor = new String[1];
-        vencedor = obterVencedores(jogoFinal, resultadoFinal);
+        String[] vencedor = obterVencedores(jogoFinal, resultadoFinal);
 
         System.out.println(Arrays.toString(vencedor));
 
