@@ -261,15 +261,6 @@ public class telaCadastro extends JFrame {
 
         JLabel lblImagem = new JLabel();
 
-        try {
-            lblImagem.setIcon(
-                new ImageIcon(telaCadastro.class.getResource("aq (1).png"))
-            );
-        } catch (Exception e) {
-            System.out.println("Imagem não encontrada.");
-            e.printStackTrace();
-        }
-
         lblImagem.setBounds(147, 91, 170, 258);
         contentPane.add(lblImagem);
     }

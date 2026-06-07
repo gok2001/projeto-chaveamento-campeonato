@@ -8,6 +8,21 @@ public class Logica {
     
     public static String[] todosOsTimes = new String[8];
     
+    
+    public static String[][] jogosQuartas = new String[4][2];
+    public static int[][] resultadoQuartas = new int[4][2];
+    public static String[] vencedoresQuartas = new String[4];
+    
+    
+    public static String[][] jogosSemi = new String[2][2];
+    public static int[][] resultadoSemi = new int[2][2];
+    public static String[] vencedoresSemi = new String[2];
+    
+    
+    public static String[][] jogoFinal = new String[1][2];
+    public static int[][] resultadoFinal = new int[1][2];
+    
+    
     public static String nomeCampeonato;
 
     public static void main(String[] args) {
@@ -21,14 +36,10 @@ public class Logica {
         }
 
         System.out.println();
-
-        String[][] jogosQuartas = new String[4][2];
+        
         jogosQuartas = montarJogos(jogosQuartas, todosOsTimes);
-
-        int[][] resultadoQuartas = new int[4][2];
+        
         resultadoQuartas = registrarPontuacao(jogosQuartas, resultadoQuartas);
-
-        String[] vencedoresQuartas = new String[4];
 
         for (int i = 0; i < resultadoQuartas.length; i++) {
             if (resultadoQuartas[i][0] > resultadoQuartas[i][1]) {
@@ -38,13 +49,10 @@ public class Logica {
             }
         }
 
-        String[][] jogosSemi = new String[2][2];
+        
         jogosSemi = montarJogos(jogosSemi, vencedoresQuartas);
 
-        int[][] resultadoSemi = new int[2][2];
         resultadoSemi = registrarPontuacao(jogosSemi, resultadoSemi);
-
-        String[] vencedoresSemi = new String[2];
 
         for (int i = 0; i < resultadoSemi.length; i++) {
             if (resultadoSemi[i][0] > resultadoSemi[i][1]) {
@@ -54,10 +62,10 @@ public class Logica {
             }
         }
 
-        String[][] jogoFinal = new String[1][2];
+        
         jogoFinal = montarJogos(jogoFinal, vencedoresSemi);
 
-        int[][] resultadoFinal = new int[1][2];
+        
         resultadoFinal = registrarPontuacao(jogoFinal, resultadoFinal);
 
         String vencedor;
@@ -116,5 +124,70 @@ public class Logica {
     
     public static void registrarNomeCamp(String nome) {
     	nomeCampeonato = nome;
+    }
+    
+    public static String montarJogosQuartas(int i, int j) {
+    	jogosQuartas = montarJogos(jogosQuartas, todosOsTimes);
+    	String res = jogosQuartas[i][j];
+    	
+    	return res;
+    }
+    
+    public static void registrarPontuacao(int j, int k, int ponto) {
+    	resultadoQuartas[j][k] = ponto;  
+    }
+    
+    public static String calcularPontuacao(int i) {
+    	if (resultadoQuartas[i][0] > resultadoQuartas[i][1]) {
+            vencedoresQuartas[i] = jogosQuartas[i][0];
+        } else {
+            vencedoresQuartas[i] = jogosQuartas[i][1];
+        }
+    	String res = vencedoresQuartas[i];
+    	return res;
+    }
+    
+    
+    public static String montarJogosSemi(int i, int j) {
+    	jogosSemi = montarJogos(jogosSemi, vencedoresQuartas);
+    	String res = jogosSemi[i][j];
+    	
+    	return res;
+    }
+    
+    
+    public static void registrarPontuacaoSemi(int j, int k, int ponto) {
+    	resultadoSemi[j][k] = ponto;  
+    }
+    
+    public static String calcularPontuacaoSemi(int i) {
+    	if (resultadoSemi[i][0] > resultadoSemi[i][1]) {
+            vencedoresSemi[i] = jogosSemi[i][0];
+        } else {
+            vencedoresSemi[i] = jogosSemi[i][1];
+        }
+    	String res = vencedoresSemi[i];
+    	return res;
+    }
+    
+    public static String montarJogoFinal(int i, int j) {
+    	jogoFinal = montarJogos(jogoFinal, vencedoresSemi);
+    	String res = jogoFinal[i][j];
+    	
+    	return res;
+    }
+    
+    public static void registrarPontuacaoFinal(int j, int k, int ponto) {
+    	resultadoFinal[j][k] = ponto;  
+    }
+    
+    public static String calcularPontuacaoFinal(int i) {
+    	String vencedor;
+    	if (resultadoFinal[i][0] > resultadoFinal[i][1]) {
+             vencedor = jogoFinal[i][0];
+        } else {
+            vencedor = jogosSemi[i][1];
+        }
+    	return vencedor;
     }
 }
