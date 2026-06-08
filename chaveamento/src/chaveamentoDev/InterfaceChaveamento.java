@@ -18,6 +18,8 @@ import java.awt.Dialog.ModalityType;
 
 import javax.swing.Box;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -82,6 +84,7 @@ public class InterfaceChaveamento extends JFrame {
 	private Canvas canvasGrup2Chaveamento1Inter;
 	private Canvas canvasGrup2Chaveamento2Inter;
 	private JTextField JtfPontoTime7;
+	private JButton btnSair;
 
 	/**
 	 * Launch the application.
@@ -429,15 +432,85 @@ public class InterfaceChaveamento extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				
 				if(btnCalcularPonto.getText() == "Calcular Quartas") {
-				
-					logica.registrarPontuacao(0, 0, Integer.parseInt(JtfPontoTime1.getText()));
-					logica.registrarPontuacao(0, 1, Integer.parseInt(JtfPontoTime2.getText()));
-					logica.registrarPontuacao(1, 0, Integer.parseInt(JtfPontoTime3.getText()));
-					logica.registrarPontuacao(1, 1, Integer.parseInt(JtfPontoTime4.getText()));
-					logica.registrarPontuacao(2, 0, Integer.parseInt(JtfPontoTime5.getText()));
-					logica.registrarPontuacao(2, 1, Integer.parseInt(JtfPontoTime6.getText()));
-					logica.registrarPontuacao(3, 0, Integer.parseInt(JtfPontoTime7.getText()));
-					logica.registrarPontuacao(3, 1, Integer.parseInt(JtfPontoTime8.getText()));
+					
+					if (JtfPontoTime1.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 1!");
+			            JtfPontoTime1.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacao(0, 0, Integer.parseInt(JtfPontoTime1.getText()));
+			        }
+					
+					
+					if (JtfPontoTime2.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 2!");
+			            JtfPontoTime2.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacao(0, 1, Integer.parseInt(JtfPontoTime2.getText()));
+			        }
+					
+					
+					if (JtfPontoTime3.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 3!");
+			            JtfPontoTime3.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacao(1, 0, Integer.parseInt(JtfPontoTime3.getText()));
+			        }
+					
+					
+					if (JtfPontoTime4.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 4!");
+			            JtfPontoTime4.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacao(1, 1, Integer.parseInt(JtfPontoTime4.getText()));
+			        }
+					
+					
+					if (JtfPontoTime5.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 5!");
+			            JtfPontoTime5.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacao(2, 0, Integer.parseInt(JtfPontoTime5.getText()));
+					}
+					
+					
+					if (JtfPontoTime6.getText().trim().isEmpty()) {
+						JOptionPane.showMessageDialog(null,
+								"Preencher Ponto do Time 6!");
+						JtfPontoTime6.requestFocus();
+						return;
+					} else {
+						logica.registrarPontuacao(2, 1, Integer.parseInt(JtfPontoTime6.getText()));
+					}
+					
+					
+					if (JtfPontoTime7.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 7!");
+			            JtfPontoTime7.requestFocus();
+			            return;
+			        } else {	
+						logica.registrarPontuacao(3, 0, Integer.parseInt(JtfPontoTime7.getText()));
+			        }
+					
+					
+					if (JtfPontoTime8.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 8!");
+			            JtfPontoTime8.requestFocus();
+			            return;
+			        } else {
+						logica.registrarPontuacao(3, 1, Integer.parseInt(JtfPontoTime8.getText()));
+			        }
 					
 					logica.calcularPontuacao(0);			
 					logica.calcularPontuacao(1);		
@@ -471,10 +544,42 @@ public class InterfaceChaveamento extends JFrame {
 				
 				if(btnCalcularPonto.getText() == "Calcular Semi") {
 					
-					logica.registrarPontuacaoSemi(0, 0, Integer.parseInt(JtfPontoTime9.getText()));
-					logica.registrarPontuacaoSemi(0, 1, Integer.parseInt(JtfPontoTime10.getText()));
-					logica.registrarPontuacaoSemi(1, 0, Integer.parseInt(JtfPontoTime11.getText()));
-					logica.registrarPontuacaoSemi(1, 1, Integer.parseInt(JtfPontoTime12.getText()));
+					if (JtfPontoTime9.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 1!");
+			            JtfPontoTime9.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacaoSemi(0, 0, Integer.parseInt(JtfPontoTime9.getText()));
+			        }
+					
+					if (JtfPontoTime10.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 2!");
+			            JtfPontoTime10.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacaoSemi(0, 1, Integer.parseInt(JtfPontoTime10.getText()));
+			        }
+					
+					if (JtfPontoTime11.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 3!");
+			            JtfPontoTime11.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacaoSemi(1, 0, Integer.parseInt(JtfPontoTime11.getText()));
+			        }
+					
+					if (JtfPontoTime12.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Ponto do Time 4!");
+			            JtfPontoTime12.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacaoSemi(1, 1, Integer.parseInt(JtfPontoTime12.getText()));
+			        }
+					
 					
 					logica.calcularPontuacaoSemi(0);
 					logica.calcularPontuacaoSemi(1);
@@ -496,12 +601,38 @@ public class InterfaceChaveamento extends JFrame {
 				
 				if(btnCalcularPonto.getText() == "Calcular Final") {
 					
-					logica.registrarPontuacaoFinal(0, 0, Integer.parseInt(JtfPontoTime13.getText()));
-					logica.registrarPontuacaoFinal(0, 1, Integer.parseInt(JtfPontoTime14.getText()));
+					if (JtfPontoTime13.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Nome Time Grupo 1!");
+			            JtfPontoTime13.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacaoFinal(0, 0, Integer.parseInt(JtfPontoTime13.getText()));
+			        }
 					
+					if (JtfPontoTime14.getText().trim().isEmpty()) {
+			            JOptionPane.showMessageDialog(null,
+			                    "Preencher Nome Time Grupo 2!");
+			            JtfPontoTime14.requestFocus();
+			            return;
+			        } else {
+			        	logica.registrarPontuacaoFinal(0, 1, Integer.parseInt(JtfPontoTime14.getText()));
+			        }
+					
+					JtfPontoTime13.setEditable(false);
+					JtfPontoTime14.setEditable(false);
+			        	
 					String vencedor = logica.calcularPontuacaoFinal(0);
 					JtfTimeVencedor.setText(vencedor);
 					
+					btnCalcularPonto.setName("Sair");
+					btnCalcularPonto.setText("Sair");
+					
+				}
+				
+				if(btnCalcularPonto.getText() == "Sair") {
+					btnCalcularPonto.addActionListener(x -> System.exit(0));
+			        contentPane.add(btnCalcularPonto);;
 				}
 			}
 		});
@@ -588,6 +719,16 @@ public class InterfaceChaveamento extends JFrame {
 		canvasSemi4.setBackground(Color.BLACK);
 		canvasSemi4.setBounds(585, 217, 6, 121);
 		contentPane.add(canvasSemi4);
+		
+		btnSair = new JButton("Sair");
+		btnSair.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				btnSair.addActionListener(t -> System.exit(0));
+		        contentPane.add(btnSair);
+			}
+		});
+		btnSair.setBounds(752, 427, 89, 23);
+		contentPane.add(btnSair);
 		
 		
 
